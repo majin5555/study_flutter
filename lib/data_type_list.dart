@@ -1,5 +1,3 @@
-import 'dart:math';
-
 void main() {
   var list1 = ["我的", 11, 2, 3, "dart", true];
   print(list1);
@@ -21,12 +19,12 @@ void main() {
   print(list4);
   list4.remove("插入第一个");
   print(list4);
-  //list4.clear();
-  //获取角标 找到的话返回元素所在的位置 找不到则返回-1
+
+  ///list4.clear();
+  ///获取角标 找到的话返回元素所在的位置 找不到则返回-1
   print(list4.indexOf("789"));
-  print(list4.sublist(1));
-  //打乱shuffle
- // https://github.com/majin5555/study_flutter.git
 
-
-  }
+  ///  print(list4.sublist(1));
+  //打印集合
+  list4.forEach(print);
+}
