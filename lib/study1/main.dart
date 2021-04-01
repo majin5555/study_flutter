@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_hellow/Persion.dart';
+import 'file:///E:/FLUTTER_PROJECT/flutter_app_hellow/lib/study1/Persion.dart';
 
 void main() {
   runApp(MyApp());
