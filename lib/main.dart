@@ -3,6 +3,7 @@ import 'package:flutter_app_hellow/widget/study_Align.dart';
 import 'package:flutter_app_hellow/widget/study_AnimatedPadding.dart';
 import 'package:flutter_app_hellow/widget/study_AnimatedSwitcher.dart';
 import 'package:flutter_app_hellow/widget/study_AssetsImage.dart';
+import 'package:flutter_app_hellow/widget/study_BottomNavigationBar.dart';
 import 'package:flutter_app_hellow/widget/study_BoxDecoration.dart';
 import 'package:flutter_app_hellow/widget/study_CheckBox.dart';
 import 'package:flutter_app_hellow/widget/study_CheckBoxListTitle.dart';
@@ -20,6 +21,7 @@ import 'package:flutter_app_hellow/widget/study_IconData.dart';
 import 'package:flutter_app_hellow/widget/study_IconTheme.dart';
 import 'package:flutter_app_hellow/widget/study_Image.dart';
 import 'package:flutter_app_hellow/widget/study_IndexStack.dart';
+import 'package:flutter_app_hellow/widget/study_ListBody.dart';
 import 'package:flutter_app_hellow/widget/study_OutlineButton.dart';
 import 'package:flutter_app_hellow/widget/study_Padding.dart';
 import 'package:flutter_app_hellow/widget/study_Radio.dart';
@@ -40,5 +42,5 @@ import 'package:flutter_app_hellow/widget/study_Text.dart';
 import 'package:flutter_app_hellow/widget/study_TextFiled.dart';
 
 void main() {
-  runApp(StudyIconTheme());
+  runApp(StudyListBody());
 }
