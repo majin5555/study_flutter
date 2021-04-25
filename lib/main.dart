@@ -11,6 +11,8 @@ import 'package:flutter_app_hellow/widget/study_ButtonBar.dart';
 import 'package:flutter_app_hellow/widget/study_Card.dart';
 import 'package:flutter_app_hellow/widget/study_CheckBox.dart';
 import 'package:flutter_app_hellow/widget/study_CheckBoxListTitle.dart';
+import 'package:flutter_app_hellow/widget/study_CheckPopupMenuItem.dart';
+import 'package:flutter_app_hellow/widget/study_Chip.dart';
 import 'package:flutter_app_hellow/widget/study_ConstrainedBox.dart';
 import 'package:flutter_app_hellow/widget/study_Container.dart';
 import 'package:flutter_app_hellow/widget/study_DatePicker.dart';
@@ -18,6 +20,7 @@ import 'package:flutter_app_hellow/widget/study_DecorationImage.dart';
 import 'package:flutter_app_hellow/widget/study_Dialog.dart';
 import 'package:flutter_app_hellow/widget/study_DropDownMenu.dart';
 import 'package:flutter_app_hellow/widget/study_DropDownMenuItem.dart';
+import 'package:flutter_app_hellow/widget/study_DynamicTheme.dart';
 import 'package:flutter_app_hellow/widget/study_Expanded.dart';
 import 'package:flutter_app_hellow/widget/study_Filemage.dart';
 import 'package:flutter_app_hellow/widget/study_FittedBox.dart';
@@ -58,7 +61,11 @@ import 'package:flutter_app_hellow/widget/study_TabBar.dart';
 import 'package:flutter_app_hellow/widget/study_Table.dart';
 import 'package:flutter_app_hellow/widget/study_Text.dart';
 import 'package:flutter_app_hellow/widget/study_TextFiled.dart';
+import 'package:flutter_app_hellow/widget/study_widget_lifecycle.dart';
+
+import 'actualCombatProject/photo_app.dart';
+import 'app_Lifecycle.dart';
 
 void main() {
-  runApp(StudyPageView());
+  runApp(PhotoApp());
 }
