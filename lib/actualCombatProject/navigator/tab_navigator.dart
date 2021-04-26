@@ -31,6 +31,11 @@ class _TabNavicatorState extends State<TabNavicator> {
       body: PageView(
         controller: _controller,
         children: [HomePage(), SearchPage(), TravelPage(), MyPage()],
+        onPageChanged: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
