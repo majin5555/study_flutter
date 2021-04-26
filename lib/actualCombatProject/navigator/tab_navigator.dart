@@ -28,10 +28,6 @@ class _TabNavicatorState extends State<TabNavicator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("FlutterTrip"),
-        leading: Icon(Icons.airplay_sharp),
-      ),
       body: PageView(
         controller: _controller,
         children: [HomePage(), SearchPage(), TravelPage(), MyPage()],

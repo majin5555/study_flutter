@@ -32,6 +32,8 @@ dependencies:
   fluttertoast: ^8.0.6
   #网络图片缓存
   cached_network_image: ^3.0.0
+  #轮播组件
+  flutter_swiper: ^1.1.6
 
 
 dev_dependencies:

@@ -20,7 +20,6 @@ import 'package:flutter_app_hellow/widget/study_DecorationImage.dart';
 import 'package:flutter_app_hellow/widget/study_Dialog.dart';
 import 'package:flutter_app_hellow/widget/study_DropDownMenu.dart';
 import 'package:flutter_app_hellow/widget/study_DropDownMenuItem.dart';
-import 'package:flutter_app_hellow/widget/study_DynamicTheme.dart';
 import 'package:flutter_app_hellow/widget/study_Expanded.dart';
 import 'package:flutter_app_hellow/widget/study_Filemage.dart';
 import 'package:flutter_app_hellow/widget/study_FittedBox.dart';
@@ -68,4 +67,5 @@ import 'app_Lifecycle.dart';
 
 void main() {
   runApp(PhotoApp());
+
 }
