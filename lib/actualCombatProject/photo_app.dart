@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -29,17 +30,19 @@ class PhotoAppContent extends StatefulWidget {
 }
 
 class _PhotoState extends State<PhotoAppContent> {
-  File _image;
+  List<File> _images = [];
 
   Future getImage(bool isTakePhoto) async {
+    //取消弹框
     Navigator.pop(context);
-    final pickedFile = await ImagePicker().getImage(
+
+    var image = await ImagePicker().getImage(
         source: isTakePhoto ? ImageSource.camera : ImageSource.gallery);
 
     setState(() {
-      if (pickedFile != null) {
-        _image = File(pickedFile.path);
-      } else {
+      if (image != null)
+        _images.add(new File(image.path));
+      else {
         print('No image selected.');
       }
     });
@@ -49,24 +52,67 @@ class _PhotoState extends State<PhotoAppContent> {
   Widget build(BuildContext context) {
     return Container(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
-            child: _image == null
-                ? Text("你还未选择任何图片？")
-                : Image.file(
-                    _image,
-                    scale: 9,
-                    fit: BoxFit.scaleDown,
-                  ),
-          ),
           RaisedButton(
             child: Text("点击选择图片"),
-            //  onPressed: getImage,
             onPressed: _pickImage,
+          ),
+          SizedBox(height: 100),
+          Center(
+            child: Wrap(
+              //布局方向为横向布局
+              direction: Axis.horizontal,
+              spacing: 8,
+              runSpacing: 5,
+              children: _genImages(),
+            ),
           ),
         ],
       ),
     );
+  }
+
+  _genImages() {
+    return _images
+        .map((e) => Stack(
+      children: [
+        ClipRRect(
+          //圆角效果
+          borderRadius: BorderRadius.circular(10),
+          child: Image.file(
+            e,
+            width: 80,
+            height: 60,
+            fit: BoxFit.cover,
+          ),
+        ),
+        Positioned(
+          right: 5,
+          top: 5,
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                _images.remove(e);
+              });
+            },
+            //圆角删除按钮
+            child: ClipOval(
+              child: Container(
+                padding: EdgeInsets.all(3),
+                decoration: BoxDecoration(color: Colors.black54),
+                child: Icon(
+                  Icons.delete,
+                  color: Colors.white,
+                  size: 18,
+                ),
+              ),
+            ),
+          ),
+        )
+      ],
+    ))
+        .toList();
   }
 
   _pickImage() {
@@ -81,7 +127,7 @@ class _PhotoState extends State<PhotoAppContent> {
               Divider(
                 height: 10.0,
                 indent: 60.0,
-                color: Colors.red,
+                color: Colors.grey,
               ),
               _item("从相册选择", false),
             ],
