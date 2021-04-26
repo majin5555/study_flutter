@@ -62,10 +62,22 @@ import 'package:flutter_app_hellow/widget/study_Text.dart';
 import 'package:flutter_app_hellow/widget/study_TextFiled.dart';
 import 'package:flutter_app_hellow/widget/study_widget_lifecycle.dart';
 
+import 'actualCombatProject/navigator/tab_navigator.dart';
 import 'actualCombatProject/photo_app.dart';
 import 'app_Lifecycle.dart';
 
-void main() {
-  runApp(PhotoApp());
 
+void main() {
+  runApp(AppTrip());
+}
+
+class AppTrip extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'FlutterTrip ',
+      home: TabNavicator(),
+    );
+  }
 }
