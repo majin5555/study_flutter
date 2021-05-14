@@ -8,6 +8,11 @@ import 'package:image_picker/image_picker.dart';
  * @desc:   ImageFile   资源图片
  */
 
+
+void main() {
+  runApp(StudyImageFile());
+}
+
 class StudyImageFile extends StatelessWidget {
   // This widget is the root of your application.
   @override

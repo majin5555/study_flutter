@@ -7,6 +7,11 @@ import 'package:flutter_app_hellow/oop/generic_learn.dart';
  * @desc:   IconData   字体图标组件
  */
 
+
+void main() {
+  runApp(StudyIconData());
+}
+
 class StudyIconData extends StatelessWidget {
   // This widget is the root of your application.
   @override

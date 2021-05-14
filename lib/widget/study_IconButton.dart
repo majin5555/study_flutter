@@ -6,6 +6,10 @@ import 'package:flutter/material.dart';
  * @desc:   IconButton  按钮组件
  */
 
+void main() {
+  runApp(StudyIconButton());
+}
+
 class StudyIconButton extends StatelessWidget {
   // This widget is the root of your application.
   @override

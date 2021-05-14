@@ -8,7 +8,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <application
-        android:name="io.flutter.app.FlutterApplication"
         android:icon="@mipmap/app"
         android:label="flutter_app_hellow"
         android:networkSecurityConfig="@xml/network_security_config"

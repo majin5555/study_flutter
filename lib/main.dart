@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'actualCombatProject/navigator/tab_navigator.dart';
-
+import 'frame_fish_redux/app.dart';
 
 void main() {
-  runApp(AppTrip());
+  //runApp(AppTrip());
+
+  runApp(createApp());
 }
 
 class AppTrip extends StatelessWidget {
@@ -16,4 +18,3 @@ class AppTrip extends StatelessWidget {
     );
   }
 }
-
